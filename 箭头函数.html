@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //=>
+    // let fn1=function () {
+    //
+    // }
+    // let fn2=(a,b)=>{
+    //     return a+b;
+    // }
+
+    //和原本函数声明的区别
+    //1.this是静态的
+    let fn1=function () {
+    console.log(this.name)
+    }
+    let fn2=()=>{
+        console.log(this.name)
+    }
+    window.name=`吴宝`;
+    const wu={
+        name:"baobao"
+    }
+    fn1();
+    fn2();
+    fn1.call(wu);
+    fn2.call(wu);
+
+    //2、不能作为构造函数实例化对象
+    //3.不能使用argument变量
+    //4.箭头函数简写。当且只有一个形参的时候可以省略（）
+    let fn4=a=>{
+
+    }
+</script>
+</body>
+</html>
