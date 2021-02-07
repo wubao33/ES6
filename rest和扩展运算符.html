@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //...args获取函数的实参，代替arguments，argument获取的是object
+    function a(...args) {
+        console.log(args)
+    }
+    a(`a`,`b`,`c`);
+
+    //获取的数据为数组，可以使用数组的API。
+    //rest参数必须放在最后
+
+
+    //扩展运算符...
+    //将数组转换为逗号分隔的参数序列
+    const A=[1,3,4,7];
+    console.log(...A);
+    //合并数组 ES5使用的是concat
+    const  B=[2,5,7,8]
+    console.log([...A,...B]);
+    //数组的克隆
+    const D=[...B];
+    //伪数组转真数组
+
+
+</script>
+
+</body>
+</html>
