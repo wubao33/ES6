@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //生成器其实就是一个特殊的函数
+    //异步编程的一种解决方案
+
+    function * f1(arg){
+        console.log(arg);
+        let one=yield 111;
+        console.log(one);
+        let two=yield 222;
+        console.log(two);
+        let three=yield 333;
+        console.log(three);
+    }
+    let iterator=f1('AAA');
+    // console.log(iterator);
+    console.log(iterator.next());
+     console.log(iterator.next(`BBB`));
+    console.log(iterator.next(`CCC`));
+    console.log(iterator.next(`DDD`));
+    // console.log(iterator.next());
+</script>
+</body>
+
+</html>

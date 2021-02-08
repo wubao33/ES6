@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //迭代器是一个接口iterator（对象里的一个属性，Symbol.iterator）
+    const A=[`a`,`b`,`c`,`d`];
+    for (let v of A){
+        console.log(v);
+    }//值
+    for (let v in A){
+        console.log(v);
+    }//键
+
+    //原理，调用对象的next对象
+    let iterator=A[Symbol.iterator]();
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+
+
+</script>
+</body>
+</html>

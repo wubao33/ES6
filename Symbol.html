@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //symbol
+    let s=Symbol();
+    let s2=Symbol('aaa');
+    let s3=Symbol('aaa');
+    console.log(s2===s3)//flase
+
+    let s4=Symbol.for(`aaa`);
+    let s5=Symbol.for(`aaa`);
+    console.log(s4===s5)//true
+    //七个数据类型。
+    //string
+    //number
+    //boolean
+    //null
+    //underfined
+    //sybol
+
+    //Object
+
+    //symbol，可以用来向对象中添加方法，防止重复。
+    //symbol的内置属性
+    //symbol的内置值，用来做对象的属性。通过对symbol内置值的设置，
+    //改变指向语言内部使用的方法,具体详见红宝书
+    class Person {
+        static [Symbol.hasInstance](param){
+            console.log(param);
+            console.log("检测");
+            return true;
+        }
+    }
+    let o={};
+    console.log(o instanceof Person);
+
+</script>
+
+</body>
+</html>
