@@ -4,4 +4,5 @@
 解决方案：将attr换成prop
 prop("selected",true);
 总结：本身固有属性时，使用prop；
+html本身属性的话最好使用prop方法
 自己创建的新属性，使用attr；
