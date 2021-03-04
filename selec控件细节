@@ -3,3 +3,5 @@
 通过console控制台也看到该option确实为true，但实际显示select还是原来的选中值，甚至还有偶发性的情况。
 解决方案：将attr换成prop
 prop("selected",true);
+总结：本身固有属性时，使用prop；
+自己创建的新属性，使用attr；
